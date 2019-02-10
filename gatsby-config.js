@@ -1,10 +1,18 @@
 module.exports = {
   siteMetadata: {
     title: `Jeremy Dost`,
-    description: `Personal site of Jeremy Dost: technologist, visual artist, soccer fan and dad.`,
+    description: `Personal site of Jeremy Dost: technologist and visual artist`,
     author: `@jezza`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-typography`,
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
+    },    
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

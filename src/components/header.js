@@ -1,12 +1,15 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import theme from "../styles/theme"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
+      display: `none`,
+      width: `100%`,
+      position: `fixed`,
+      background: theme.colors.greyGreen,
     }}
   >
     <div
@@ -20,7 +23,7 @@ const Header = ({ siteTitle }) => (
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: theme.colors.greyDark,
             textDecoration: `none`,
           }}
         >
