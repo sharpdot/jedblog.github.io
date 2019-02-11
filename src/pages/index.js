@@ -126,7 +126,7 @@ const IndexPage = () => (
       <HeroInner>
         <h1>happy {greetingText()}</h1>
         <HeroText>
-          <p>Welcome to my site. I'm CTO at <a href="https://www.deelmedia.com" title="DEEL Media! is a full service digital merchandising agency. We deliver high end digital signage solutions and custom software.">DEEL Media!</a>, a technology lover and artist in Atlanta, GA. I'd like to share <a href="http://www.lynoredost.com/" title="I recently updated my wife's sculpture portfolio website to use angular 6">something new I made</a>, <a href="http://laika.org" title="18 years old! Amazingly, I found that this site I built for Planet Mouse back in 2000 is still out there on the web and still works too!">something old I made</a> and <a href="https://github.com/robbyrussell/oh-my-zsh" title="I spend a lot of my day in terminal lately and oh-my-zsh has been making that a lot more pleasant.">a great tool I've been using lately</a>.</p>
+          <p>Welcome to my site. I'm CTO at <a href="https://www.deelmedia.com" title="DEEL Media! is a full service digital merchandising agency. We deliver high end digital signage solutions and custom software.">DEEL Media!</a> and former owner of sharpdot. I am a technology lover and artist in Atlanta, GA. </p>
           <p>Drop me a line on social media to connect.</p>
           <p class="sep">Jeremy Dost</p>
         </HeroText>
