@@ -54,11 +54,13 @@ const HeroText = styled.div`
   line-height: 1.4;
   margin-bottom: 2rem;
   a {
-    box-shadow: 0 1px 0 0 currentColor;
+    color: ${theme.colors.greyGreen};
+    background: ${theme.colors.greyDark};
     &:hover,
     &:focus {
-      color: ${theme.colors.greyGreen};
-      background: ${theme.colors.greyDark};
+      color: inherit;
+      background: transparent;
+      box-shadow: 0 1px 0 0 currentColor;
       transition: all 0.25s ease-out;
     }
   }
@@ -103,12 +105,15 @@ const Social = styled.ul`
     }
     a {
       font-style: normal;
-      color: ${theme.colors.greyDark};
+      color: ${theme.colors.greyGreen};
+      background: ${theme.colors.greyDark};
+      padding: 2px;
       font-size: 1.333rem;
       font-weight: 600;
       &:hover,
       &:focus {
         color: ${theme.colors.primary};
+        background: inherit;
         text-decoration: none;
       }
       @media (max-width: ${theme.breakpoints.s}) {
@@ -126,7 +131,11 @@ const IndexPage = () => (
       <HeroInner>
         <h1>happy {greetingText()}</h1>
         <HeroText>
-          <p>Welcome to my site. I'm CTO at <a href="https://www.deelmedia.com" title="DEEL Media! is a full service digital merchandising agency. We deliver high end digital signage solutions and custom software.">DEEL Media!</a> and former owner of sharpdot. I am a technology lover and artist in Atlanta, GA. </p>
+          <p>Welcome to my site.
+            &nbsp;I'm CTO at <a href="https://www.deelmedia.com" title="DEEL Media! is a full service digital merchandising agency. We deliver high end digital signage solutions and custom software.">DEEL Media!</a>
+            &nbsp;and former owner of sharpdot.
+            &nbsp;I am a technology lover <a href="https://art.jeremydost.com" title="Check out some of my work on my portfolio site.">and artist</a>
+            &nbsp;in Atlanta, GA. </p>
           <p>Drop me a line on social media to connect.</p>
           <p class="sep">Jeremy Dost</p>
         </HeroText>
