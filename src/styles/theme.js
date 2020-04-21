@@ -9,6 +9,7 @@ const theme = {
     grey: '#595C62',
     greyDark: '#303643',
     greyDarker: '#1c252b',
+    brightBlue: '#3634de'
   },
   maxWidth: '1000px',
   maxWidthText: '720px',

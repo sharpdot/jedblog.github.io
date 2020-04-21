@@ -100,7 +100,7 @@ const Social = styled.ul`
     &:not([data-name='social-entry-0']) {
       margin-left: 2.5rem;
       @media (max-width: ${theme.breakpoints.s}) {
-        margin-left: 1.75rem;
+        margin-left: 1.25rem;
       }
     }
     a {
@@ -131,11 +131,7 @@ const IndexPage = () => (
       <HeroInner>
         <h1>happy {greetingText()}</h1>
         <HeroText>
-          <p>Welcome to my site.
-            &nbsp;I'm CTO at <a href="https://www.deelmedia.com" title="DEEL Media! is a full service digital merchandising agency. We deliver high end digital signage solutions and custom software.">DEEL Media!</a>
-            &nbsp;and former owner of sharpdot.
-            &nbsp;I am a technology lover <a href="https://art.jeremydost.com" title="Check out some of my work on my portfolio site.">and artist</a>
-            &nbsp;in Atlanta, GA. </p>
+          <p>Welcome to my site. I'm CTO at <a href="https://www.deelmedia.com" title="DEEL Media! is a full service digital merchandising agency. We deliver high end digital signage solutions and custom software.">DEEL Media!</a> and former owner of sharpdot. I am a technology lover <a href="https://art.jeremydost.com" title="Check out some of my work on my portfolio site.">and artist</a> in Atlanta, GA. </p>
           <p>Drop me a line on social media to connect.</p>
           <p class="sep">Jeremy Dost</p>
         </HeroText>
