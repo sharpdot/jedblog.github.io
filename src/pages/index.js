@@ -132,7 +132,7 @@ const ProjectListing = styled.ul`
   margin-left: 0;
   margin-top: 4rem;
   li {
-    margin-bottom: 2.45rem;
+    margin-bottom: 2.95rem;
     a {
       font-size: 2.369rem;
       font-style: normal;
@@ -150,20 +150,20 @@ const projects = {
     {
       primary: {
         label: {
-          text: 'New portfolio site!'
+          text: 'Arts Beacon is adding online art camps'
         },
         link: {
-          url: 'https://art.jeremydost.com/'
+          url: 'https://www.artsbeacon.com/'
         }
       }
     },
     {
       primary: {
         label: {
-          text: 'Sharpdot Archives'
+          text: 'Check out my new portfolio site'
         },
         link: {
-          url: 'https://archive.sharpdotinc.com/'
+          url: 'https://art.jeremydost.com/'
         }
       }
     }
