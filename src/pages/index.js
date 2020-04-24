@@ -5,10 +5,14 @@ import Layout from "../components/layout"
 import Wrapper from "../components/wrapper"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import Title from '../components/title'
+import Listing from '../components/listing'
 import moment from "moment"
 import styled from "styled-components"
 
 import theme from "../styles/theme"
+
+const IndexWrapper = Wrapper.withComponent('main')
 
 let greetingText = (now) => {
   if (typeof now === 'undefined') {
@@ -123,6 +127,49 @@ const Social = styled.ul`
   }
 `
 
+const ProjectListing = styled.ul`
+  list-style-type: none;
+  margin-left: 0;
+  margin-top: 4rem;
+  li {
+    margin-bottom: 2.45rem;
+    a {
+      font-size: 2.369rem;
+      font-style: normal;
+      font-weight: 600;
+      color: ${theme.colors.black};
+      @media (max-width: ${theme.breakpoints.s}) {
+        font-size: 1.777rem;
+      }
+    }
+  }
+`
+
+const projects = {
+  nodes: [
+    {
+      primary: {
+        label: {
+          text: 'New portfolio site!'
+        },
+        link: {
+          url: 'https://art.jeremydost.com/'
+        }
+      }
+    },
+    {
+      primary: {
+        label: {
+          text: 'Sharpdot Archives'
+        },
+        link: {
+          url: 'https://archive.sharpdotinc.com/'
+        }
+      }
+    }
+  ]
+}
+
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
@@ -133,7 +180,7 @@ const IndexPage = () => (
         <HeroText>
           <p>Welcome to my site. I'm CTO at <a href="https://www.deelmedia.com" title="DEEL Media! is a full service digital merchandising agency. We deliver high end digital signage solutions and custom software.">DEEL Media!</a> and former owner of sharpdot. I am a technology lover <a href="https://art.jeremydost.com" title="Check out some of my work on my portfolio site.">and artist</a> in Atlanta, GA. </p>
           <p>Drop me a line on social media to connect.</p>
-          <p class="sep">Jeremy Dost</p>
+          <p className="sep">Jeremy Dost</p>
         </HeroText>
         <Social>
           <li data-name="social-entry-0" key="github">
@@ -148,7 +195,16 @@ const IndexPage = () => (
         </Social>
       </HeroInner>
     </Hero>
-    
+    <IndexWrapper id="42" style={{ paddingTop: '2rem', paddingBottom: '8rem' }}>
+      <Title style={{ marginTop: '8rem' }}>the thing that gets you to the thing</Title>
+      <ProjectListing>
+        {projects.nodes.map(project => (
+          <li key={project.primary.label.text}>
+            <a href={project.primary.link.url}>{project.primary.label.text}</a>
+          </li>
+        ))}
+      </ProjectListing>      
+    </IndexWrapper>
 
   </Layout>
 )
