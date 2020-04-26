@@ -221,8 +221,6 @@ const IndexPage = () => (
       </HeroInner>
     </Hero>
     <IndexWrapper id="42" style={{ paddingTop: '2rem', paddingBottom: '8rem' }}>
-      <Title style={{ marginTop: '4rem' }}>Recent Posts</Title>
-      <Listing posts={posts.nodes} />
       <Title style={{ marginTop: '8rem' }}>the thing that gets you to the thing</Title>
       <ProjectListing>
         {projects.nodes.map(project => (
