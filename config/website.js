@@ -1,24 +1,24 @@
 module.exports = {
   pathPrefix: '/', // Prefix for all links. If you deploy your site to example.com/portfolio your pathPrefix should be "portfolio"
-  title: 'Gatsby Starter - Prismic.io', // Navigation and Site Title
-  titleAlt: 'Gatsby Prismic.io', // Title for JSONLD
-  description: 'A typography-heavy & light-themed Gatsby Starter which uses the Headless CMS Prismic.',
-  headline: 'Writing and publishing content for LekoArts', // Headline for schema.org JSONLD
-  url: 'https://prismic.lekoarts.de', // Domain of your site. No trailing slash!
+  title: 'Jeremy Dost', // Navigation and Site Title
+  titleAlt: 'Personal site of Jeremy Dost', // Title for JSONLD
+  description: 'Personal site of Jeremy Dost: technologist and visual artist',
+  headline: 'Just messing around on the web', // Headline for schema.org JSONLD
+  url: 'https://www.jeremydost.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  logo: '/logos/logo-1024.png', // Used for SEO
+  logo: '/logos/logo-1024.png', // TODO change thhis Used for SEO
   ogLanguage: 'en_US', // Facebook Language
 
   // JSONLD / Manifest
-  favicon: 'src/favicon.png', // Used for manifest favicon generation
-  shortName: 'Prismic', // shortname for manifest. MUST be shorter than 12 characters
-  author: 'LekoArts', // Author for schemaORGJSONLD
+  favicon: 'src/favicon.png', // TODO change this Used for manifest favicon generation
+  shortName: 'jdost', // shortname for manifest. MUST be shorter than 12 characters
+  author: 'Jeremy Dost', // Based on LekoArts prismic starter Author for schemaORGJSONLD
   themeColor: '#3D63AE',
   backgroundColor: '#EBEDF2',
 
-  twitter: '@starter_prismicio', // Twitter Username
-  facebook: 'gatsby-prismic', // Facebook Site Name
-  googleAnalyticsID: 'UA-47519312-7',
+  twitter: '@jezza', // Twitter Username
+  facebook: 'gatsby-prismic', // TODO change this Facebook Site Name
+  googleAnalyticsID: 'UA-12345', // TODO add ga
 
   skipNavId: 'reach-skip-nav', // ID for the "Skip to content" a11y feature
 }

@@ -7,15 +7,18 @@ import Categories from '../components/Listing/Categories'
 import website from '../../config/website'
 
 const Hero = styled.header`
-  background-color: ${props => props.theme.colors.greyLight};
+  background-color: ${props => props.theme.colors.blue};
   padding-top: 1rem;
   padding-bottom: 4rem;
+  h1 {
+    color: ${props => props.theme.colors.white};
+  }
 `
 
 const Headline = styled.p`
   font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-  color: ${props => props.theme.colors.grey};
+  color: ${props => props.theme.colors.white70};
   font-size: 1.25rem;
   a {
     font-style: normal;
@@ -51,7 +54,7 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
       </Hero>
       <PostWrapper id={website.skipNavId}>
         <SliceZone allSlices={data.body} />
-        <Title style={{ marginTop: '4rem' }}>Recent posts</Title>
+        <Title style={{ marginTop: '4rem' }}>More posts</Title>
         <Listing posts={posts.nodes} />
       </PostWrapper>
     </Layout>

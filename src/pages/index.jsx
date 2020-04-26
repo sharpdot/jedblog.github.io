@@ -2,20 +2,24 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from '@emotion/styled'
 import { graphql } from 'gatsby'
+import moment from 'moment'
 import { Layout, Listing, Wrapper, Title } from '../components'
 import website from '../../config/website'
 
 const Hero = styled.header`
-  background-color: ${props => props.theme.colors.greyLight};
+  background-color: ${props => props.theme.colors.blue};
+  color: ${props => props.theme.colors.white};
   display: flex;
   align-items: center;
 `
 
 const HeroInner = styled(Wrapper)`
-  padding-top: 13rem;
-  padding-bottom: 13rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
   h1 {
     margin-bottom: 2rem;
+    font-size: 2.8rem;
+    color: ${props => props.theme.colors.white};
   }
   @media (max-width: ${props => props.theme.breakpoints.l}) {
     padding-top: 10rem;
@@ -35,6 +39,35 @@ const HeroText = styled.div`
   font-size: 1.7rem;
   line-height: 1.4;
   margin-bottom: 2rem;
+  a {
+    font-style: normal;
+    color: ${props => props.theme.colors.greyDark};
+    background: ${props => props.theme.colors.white70};
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      color: inherit;
+      background: transparent;
+      box-shadow: 0 1px 0 0 currentColor;
+      transition: all 0.12s ease-out;
+    }
+  }
+  .sep {
+    font-style: italic;
+    position: relative;
+    left: 80px;
+    margin-bottom: 120px;
+    &:before {
+      content: '';
+      width: 3rem;
+      height: 1px;
+      background-color: ${props => props.theme.colors.white70};
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: -80px;
+    }
+  }
   @media (max-width: ${props => props.theme.breakpoints.m}) {
     font-size: 1.4rem;
   }
@@ -48,6 +81,7 @@ const Social = styled.ul`
   display: flex;
   flex-wrap: wrap;
   margin-left: 0;
+  margin-top: 8rem;
   font-family: 'Source Sans Pro', -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial',
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   li {
@@ -61,11 +95,14 @@ const Social = styled.ul`
     a {
       font-style: normal;
       color: ${props => props.theme.colors.greyDark};
+      background: ${props => props.theme.colors.white70};
+      padding: 2px;
       font-size: 1.333rem;
       font-weight: 600;
       &:hover,
       &:focus {
-        color: ${props => props.theme.colors.primary};
+        color: ${props => props.theme.colors.white};
+        background: inherit;
         text-decoration: none;
       }
       @media (max-width: ${props => props.theme.breakpoints.s}) {
@@ -94,6 +131,16 @@ const ProjectListing = styled.ul`
 
 const IndexWrapper = Wrapper.withComponent('main')
 
+const greetingText = greetingDate => {
+  const d = typeof greetingDate === 'undefined' ? moment() : greetingDate
+  let resp = `this ${d.format('dddd').toLowerCase()} `
+  const currentHour = d.hour()
+  if (currentHour < 12) resp += 'morning'
+  else if (currentHour < 18) resp += 'afternoon'
+  else resp += 'evening'
+  return resp
+}
+
 class Index extends Component {
   render() {
     const {
@@ -103,7 +150,9 @@ class Index extends Component {
       <Layout>
         <Hero>
           <HeroInner>
-            <h1>{homepage.data.title.text}</h1>
+            <h1>
+              {homepage.data.title.text} {greetingText()}
+            </h1>
             <HeroText dangerouslySetInnerHTML={{ __html: homepage.data.content.html }} />
             <Social>
               {social.nodes.map((s, index) => (

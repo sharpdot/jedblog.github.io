@@ -8,6 +8,7 @@ const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.45,
   headerFontFamily: [
+    'Source Sans Pro',
     'Lora',
     '-apple-system',
     'BlinkMacSystemFont',
