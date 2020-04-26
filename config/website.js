@@ -6,11 +6,11 @@ module.exports = {
   headline: 'Just messing around on the web', // Headline for schema.org JSONLD
   url: 'https://www.jeremydost.com', // Domain of your site. No trailing slash!
   siteLanguage: 'en', // Language Tag on <html> element
-  logo: '/logos/logo-1024.png', // TODO change thhis Used for SEO
+  logo: '/logos/logo-1024.png', // Used for SEO
   ogLanguage: 'en_US', // Facebook Language
 
   // JSONLD / Manifest
-  favicon: 'src/favicon.png', // TODO change this Used for manifest favicon generation
+  favicon: 'src/favicon.png', // Tthis Used for manifest favicon generation
   shortName: 'jdost', // shortname for manifest. MUST be shorter than 12 characters
   author: 'Jeremy Dost', // Based on LekoArts prismic starter Author for schemaORGJSONLD
   themeColor: '#3D63AE',
@@ -18,7 +18,7 @@ module.exports = {
 
   twitter: '@jezza', // Twitter Username
   facebook: 'gatsby-prismic', // TODO change this Facebook Site Name
-  googleAnalyticsID: 'UA-12345', // TODO add ga
+  googleAnalyticsID: 'UA-164609516-1',
 
   skipNavId: 'reach-skip-nav', // ID for the "Skip to content" a11y feature
 }

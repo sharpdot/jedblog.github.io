@@ -1,3 +1,8 @@
+# jed stuff
+scratch.txt
+backups
+.DS_Store
+
 ### Node ###
 # Logs
 logs
@@ -65,3 +70,4 @@ bundle-stats.json
 
 cypress/screenshots
 cypress/videos
+
