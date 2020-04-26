@@ -9,11 +9,15 @@ import theme from "../styles/theme"
 
 
 const Footer = styled.footer`
-  background-color: ${theme.colors.greyGreen};
+  background-color: ${theme.colors.blue};
+  color: ${theme.colors.white};
   div {
     max-width: 1000px;
     margin: 0 auto;
     padding: 2rem;
+  }
+  a {
+    color: ${theme.colors.white};
   }
 `
 

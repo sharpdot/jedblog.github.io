@@ -1,9 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Wrapper from "../components/wrapper"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import Title from '../components/title'
 import Listing from '../components/listing'
@@ -27,7 +25,8 @@ let greetingText = (now) => {
 }
 
 const Hero = styled.header`
-  background-color: ${theme.colors.greyGreen};
+  background-color: ${theme.colors.brightBlue};
+  color: ${theme.colors.white};
   display: flex;
   align-items: center;
 `
@@ -58,8 +57,8 @@ const HeroText = styled.div`
   line-height: 1.4;
   margin-bottom: 2rem;
   a {
-    color: ${theme.colors.greyGreen};
-    background: ${theme.colors.greyDark};
+    color: ${theme.colors.greyDark};
+    background: ${theme.colors.white70};
     &:hover,
     &:focus {
       color: inherit;
@@ -77,7 +76,7 @@ const HeroText = styled.div`
         content: "";
         width: 3rem;
         height: 1px;
-        background-color: rgb(89, 92, 98);
+        background-color: ${theme.colors.white70};
         display: inline-block;
         position: absolute;
         top: 50%;
@@ -109,14 +108,14 @@ const Social = styled.ul`
     }
     a {
       font-style: normal;
-      color: ${theme.colors.greyGreen};
-      background: ${theme.colors.greyDark};
+      color: ${theme.colors.greyDark};
+      background: ${theme.colors.white70};
       padding: 2px;
       font-size: 1.333rem;
       font-weight: 600;
       &:hover,
       &:focus {
-        color: ${theme.colors.primary};
+        color: ${theme.colors.white};
         background: inherit;
         text-decoration: none;
       }
@@ -160,11 +159,37 @@ const projects = {
     {
       primary: {
         label: {
-          text: 'Check out my new portfolio site'
+          text: 'New portfolio site online'
         },
         link: {
           url: 'https://art.jeremydost.com/'
         }
+      }
+    }
+  ]
+}
+
+const posts = {
+  nodes: [
+    {
+      data: {
+        uid: 'foobar',
+        title: {
+          text: 'yowzers'
+        },
+        categories: [
+          {
+            category: {
+              document: [
+                { 
+                  data: {
+                    name: 'art'
+                  }
+                }
+              ]
+            }
+          }
+        ]
       }
     }
   ]
@@ -196,6 +221,8 @@ const IndexPage = () => (
       </HeroInner>
     </Hero>
     <IndexWrapper id="42" style={{ paddingTop: '2rem', paddingBottom: '8rem' }}>
+      <Title style={{ marginTop: '4rem' }}>Recent Posts</Title>
+      <Listing posts={posts.nodes} />
       <Title style={{ marginTop: '8rem' }}>the thing that gets you to the thing</Title>
       <ProjectListing>
         {projects.nodes.map(project => (
