@@ -133,7 +133,7 @@ const IndexWrapper = Wrapper.withComponent('main')
 
 const greetingText = greetingDate => {
   const d = typeof greetingDate === 'undefined' ? moment() : greetingDate
-  let resp = `this ${d.format('dddd').toLowerCase()} `
+  let resp = `happy ${d.format('dddd').toLowerCase()} `
   const currentHour = d.hour()
   if (currentHour < 12) resp += 'morning'
   else if (currentHour < 18) resp += 'afternoon'
@@ -150,9 +150,7 @@ class Index extends Component {
       <Layout>
         <Hero>
           <HeroInner>
-            <h1>
-              {homepage.data.title.text} {greetingText()}
-            </h1>
+            <h1>{greetingText()}</h1>
             <HeroText dangerouslySetInnerHTML={{ __html: homepage.data.content.html }} />
             <Social>
               {social.nodes.map((s, index) => (
