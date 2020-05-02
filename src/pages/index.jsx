@@ -162,9 +162,7 @@ class Index extends Component {
           </HeroInner>
         </Hero>
         <IndexWrapper id={website.skipNavId} style={{ paddingTop: '2rem', paddingBottom: '2rem' }}>
-          <Title style={{ marginTop: '4rem' }}>Recent posts</Title>
-          <Listing posts={posts.nodes} />
-          <Title style={{ marginTop: '8rem' }}>Recent projects</Title>
+          <Title style={{ marginTop: '4rem' }}>Recent projects</Title>
           <ProjectListing>
             {projects.nodes.map(project => (
               <li key={project.primary.label.text}>
@@ -172,6 +170,8 @@ class Index extends Component {
               </li>
             ))}
           </ProjectListing>
+          <Title style={{ marginTop: '8rem' }}>Recent posts</Title>
+          <Listing posts={posts.nodes} />
         </IndexWrapper>
       </Layout>
     )
@@ -235,7 +235,7 @@ export const pageQuery = graphql`
           title {
             text
           }
-          date(formatString: "DD.MM.YYYY")
+          date(formatString: "MM.DD.YYYY")
           categories {
             category {
               document {

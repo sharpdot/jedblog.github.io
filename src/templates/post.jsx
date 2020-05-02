@@ -13,6 +13,9 @@ const Hero = styled.header`
   h1 {
     color: ${props => props.theme.colors.white};
   }
+  a {
+    color: ${props => props.theme.colors.white};
+  }
 `
 
 const Headline = styled.p`
@@ -87,7 +90,7 @@ export const pageQuery = graphql`
           text
         }
         description
-        date(formatString: "DD.MM.YYYY")
+        date(formatString: "MM.DD.YYYY")
         categories {
           category {
             document {
