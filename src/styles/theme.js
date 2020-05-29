@@ -10,6 +10,7 @@ const theme = {
     greyDarker: '#1c252b',
     brightBlue: '#3057e6',
     blue: '#3634de',
+    red: '#ad1e38',
     white: 'rgba(255, 255, 255, 1)',
     white70: 'rgba(255,255,255,0.7)',
   },
