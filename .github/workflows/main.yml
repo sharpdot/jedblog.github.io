@@ -27,4 +27,5 @@ jobs:
         with:
           access-token: ${{ secrets.ACCESS_TOKEN }}
           deploy-branch: gh-pages
-          skip-publish: true
+          # uncomment to test publishing
+          # skip-publish: true
